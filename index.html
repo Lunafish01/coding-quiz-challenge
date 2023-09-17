@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" >
     <script src="script.js"></script>
-    <title>Coding quiz</title>
+    <title>Coding Quiz</title>
 </head>
 <body>
-    <!--set up question card with answer buttons -->
-    <!--need to add buttons for start/next-->
+    <header>
+        <h2 id="timer-text">Timer</h2>
+    </header>
+
     <div class="container">
-        <div id="question-container" class=hide>
-            <div id="question">Question</div>
-            <div id="answer-btn" class="btn-layout">
-                <button class="btn">Answer</button>
-                <button class="btn">Answer</button>
-                <button class="btn">Answer</button>
-                <button class="btn">Answer</button>
-            </div>
+        <h1>Test your might and knowledge!</h1>
+        <div class="questions">Submit your question here</div>
+            <button class="answer-btn">Answer 1</button>
+            <button class="answer-btn">Answer 2</button>
+            <button class="answer-btn">Answer 3</button>
+            <button class="answer-btn">Answer 4</button>
         </div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="start-btn" class="start-btn btn">Next</button>
-        </div>
+    </div>
+    <div class="controls">
+        <button id="start-btn">Start</button>
     </div>
 </body>
 </html>

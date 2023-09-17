@@ -12,6 +12,20 @@ body{
     align-items: center;
 }
 
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#timer{
+    width: 400px;
+    max-width: 40%;
+    padding: 10px;
+    display: flex;
+    align-items: center;    
+}
+
 .container{
     width: 800px;
     max-width: 80%;
@@ -19,4 +33,10 @@ body{
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 5px;
+}
+
+#start-btn{
+    position: absolute;
+    display: inline-block;
+    align-items: center;
 }
