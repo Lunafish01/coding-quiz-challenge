@@ -22,6 +22,8 @@ setTimer();
 
 
 //build question and answer bank (almost done)
+//declare an array with questions and answers
+//define objects that hold the question, answer key and correct answers
 var questionBank = [
 
     {
@@ -33,7 +35,10 @@ var questionBank = [
             c: 'Houston',
             d: 'San Antonio'
         },
-    }
+
+        correctAnswer: 'b'
+        
+    },
 
     {
         question: 'To assign a value to variable you should use which operator?',
@@ -43,8 +48,10 @@ var questionBank = [
             b: '/',
             c: '*',
             d: '='
-        }
-    }
+        },
+
+        correctAnswer: 'd'
+    },
 
     {
         question: 'Which of the following is a selector in CSS?',
@@ -54,8 +61,10 @@ var questionBank = [
             b: 'header',
             c: 'class',
             d: 'semantic tag'
-        }
-    }
+        },
+
+        correctAnswer: 'c'
+    },
 
     {
         question: 'What kind of language is JavaScrip?',
@@ -65,7 +74,9 @@ var questionBank = [
             b: 'styling',
             c: 'mark-up',
             d: 'foreign'
-        }
+        },
+
+        correctAnswer: 'a'
     }
     
 ];
