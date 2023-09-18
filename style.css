@@ -33,6 +33,7 @@ header{
 }
 
 .container{
+    display: inline-block;
     width: 800px;
     max-width: 80%;
     background-color: blanchedalmond;
@@ -41,8 +42,18 @@ header{
     box-shadow: 0 0 10px 5px;
 }
 
-.startButton{
-    position: absolute;
-    display: inline-block;
-    align-items: center;
+.answer-btn-box{
+
 }
+
+.answer-btn{
+    background-color: antiquewhite;
+    font-weight: 300;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+
