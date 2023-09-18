@@ -1,22 +1,41 @@
+//when page loads timer starts 
+//build timer for 60 secs 
+//show message 'Game Over!' when timer reachs 0 
+
+var countDown = 60;
+var timerEl = document.getElementById("count-down");
+
+function setTimer() {
+    var timerInterval = setInterval(function(){
+        if(countDown > 0) {
+            countDown--;
+            timerEl.textContent = "00:" + countDown;
+        }
+        if(countDown === 0) {
+            timerEl.textContent = "Game Over!";
+            clearInterval(timerInterval);
+        }
+    }, 1000);
+}
 //build start button (done, need to center start button)
-// when user clicks start button, 
-//then timer starts
-//build timer
-//set inital countdowntime (isnt working)
-//build question and answer bank (done)
+//game should start when page loads or start button is clicked
+
+
+
 //declare an array with questions and answers (done)
-//define objects that hold the question, answer key and correct answers (done)
+//build question and answer bank (done)
+//make sure to include correct aswers in array objects (done)
 
 var questionBank = [
-
+    
     {
-        question: 'What is the Captial of Texas?',
+        question: 'What does \'CSS\' mean?',
 
         answer: {
-            a: 'Dallas',
-            b: 'Austin',
-            c: 'Houston',
-            d: 'San Antonio'
+            a: 'Cascading Super Styles',
+            b: 'Cascading Style Sheets',
+            c: 'Cascading Seven Seas',
+            d: 'Cascading Sincerely Sara'
         },
 
         correctAnswer: 'b'
@@ -37,20 +56,20 @@ var questionBank = [
     },
 
     {
-        question: 'Which of the following is a selector in CSS?',
+        question: 'Which of the following is a .selector in CSS?',
 
         answer: {
             a: 'container',
             b: 'header',
             c: 'class',
-            d: 'semantic tag'
+            d: 'id'
         },
 
         correctAnswer: 'c'
     },
 
     {
-        question: 'What kind of language is JavaScrip?',
+        question: 'What kind of language is JavaScript?',
 
         answer: {
             a: 'programming',
@@ -64,39 +83,12 @@ var questionBank = [
     
 ];
 
-
-//when page loads timer starts (throwing 'textContent' error)
-
-var countDown = 60;
-var timerEl = document.getElementById("count-down");
-
-function setTimer() {
-    var timerInterval = setInterval(function(){
-        if(countDown > 0) {
-        countDown--;
-        timerEl.textContent = countDown;
-        }
-        if(countDown === 0) {
-        timerEl.textContent = "Game Over!";
-        clearInterval(timerInterval);
-        }
-    }, 1000);
-}
-
-
-// function sendMessage() {
-//     timerEl.textContent = "Times Up!"
-//}
-
-//when page loads user clicks start button to begin quiz
-
 //user is presented with first question
 //user provides input
-//take input from user
+//store user input 
 //compare input to answer bank
 //if input is correct return 'correct'
 //if input is incorrect return 'incorrect'
     // a. repeat previous 3 steps 
-//if timer reaches 0 before all questions are answered, return 'fail'
-//if user answers all questions return 'user score'
-// THEN I can save my initials and my score
+//display user score when all questions are answered or time runs out
+//user enters and saves initials and score
