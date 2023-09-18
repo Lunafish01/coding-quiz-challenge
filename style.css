@@ -19,8 +19,12 @@ header{
     left: 0;
 }
 
+h1 {
+    text-align: center;
+}
+
 .countDown{
-   background-color: blanchedalmond;
+   background-color: antiquewhite;
    border-radius: 5px;
    box-shadow: 0 0 10px 5px;
    display: inline-flex;
@@ -36,10 +40,15 @@ header{
     display: inline-block;
     width: 800px;
     max-width: 80%;
-    background-color: blanchedalmond;
+    background-color: antiquewhite;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 5px;
+}
+
+.question-text{
+    font-size: 25px;
+    text-align: center;
 }
 
 .answer-btn-box{
@@ -48,12 +57,17 @@ header{
 
 .answer-btn{
     background-color: antiquewhite;
-    font-weight: 300;
+    font-weight: 500;
+    font-size: 25px;
     width: 100%;
     border: 2px solid black;
-    border-radius: 2px;
+    border-radius: 10px;
     padding: 10px;
     margin: 10px 0;
     text-align: center;
 }
 
+.answer-btn:hover{
+    background-color: rgb(54, 90, 175);
+    color: antiquewhite
+}
