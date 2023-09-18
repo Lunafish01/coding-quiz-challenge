@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" >
-    <script src="script.js"></script>
     <title>Coding Quiz</title>
 </head>
 <body>
     <header>
-        <h2 id="timer-text">Timer</h2>
+        <h2 id="count-down" class="countDown"></h2>
     </header>
 
     <div class="container">
         <h1>Test your might and knowledge!</h1>
-        <div class="questions">Submit your question here</div>
+        <div id="questions-card" class="answerButton">
+            <div id="questions">Submit your question here</div>
             <button class="answer-btn">Answer 1</button>
             <button class="answer-btn">Answer 2</button>
             <button class="answer-btn">Answer 3</button>
             <button class="answer-btn">Answer 4</button>
+            </div>
         </div>
     </div>
     <div class="controls">
-        <button id="start-btn">Start</button>
+        <button id="start-btn" class="startButton">Start</button>
     </div>
 </body>
+<script src="script.js"></script>
 </html>

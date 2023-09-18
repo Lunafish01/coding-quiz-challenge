@@ -1,29 +1,12 @@
-//build start button 
+//build start button (done, need to center start button)
 // when user clicks start button, 
 //then timer starts
-
-
 //build timer
-//set inital countdowntime (needs work)
-var timerText = document.getElementById("timer-text");
-var countDown = 120;
-function setTimer() {
-    var timerInterval = setInterval(function(){
-        countDown--;
-        timerText.textContent = countDown + " time is running out.";
+//set inital countdowntime (isnt working)
+//build question and answer bank (done)
+//declare an array with questions and answers (done)
+//define objects that hold the question, answer key and correct answers (done)
 
-        if(countDown === 0) {
-            clearInterval(timerInterval);
-        }
-    }, 2000);
-}
-setTimer();
-
-
-
-//build question and answer bank (almost done)
-//declare an array with questions and answers
-//define objects that hold the question, answer key and correct answers
 var questionBank = [
 
     {
@@ -80,6 +63,32 @@ var questionBank = [
     }
     
 ];
+
+
+//when page loads timer starts (throwing 'textContent' error)
+
+var countDown = 60;
+var timerEl = document.getElementById("count-down");
+
+function setTimer() {
+    var timerInterval = setInterval(function(){
+        if(countDown > 0) {
+        countDown--;
+        timerEl.textContent = countDown;
+        }
+        if(countDown === 0) {
+        timerEl.textContent = "Game Over!";
+        clearInterval(timerInterval);
+        }
+    }, 1000);
+}
+
+
+// function sendMessage() {
+//     timerEl.textContent = "Times Up!"
+//}
+
+//when page loads user clicks start button to begin quiz
 
 //user is presented with first question
 //user provides input
