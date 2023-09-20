@@ -5,18 +5,18 @@
 var countDown = 60;
 var timerEl = document.getElementById("count-down");
 
-function setTimer() {
-    var timerInterval = setInterval(function(){
-        if(countDown > 0) {
-            countDown--;
-            timerEl.textContent = "00:" + countDown;
-        }
-        if(countDown === 0) {
-            timerEl.textContent = "Game Over!";
-            clearInterval(timerInterval);
-        }
-    }, 1000);
-}
+// function setTimer() {
+//     var timerInterval = setInterval(function(){
+//         if(countDown > 0) {
+//             countDown--;
+//             timerEl.textContent = "00:" + countDown;
+//         }
+//         if(countDown === 0) {
+//             timerEl.textContent = "Game Over!";
+//             clearInterval(timerInterval);
+//         }
+//     }, 1000);
+// }
 //build start button (done, need to center start button)
 //game should start when page loads or start button is clicked
 
@@ -84,6 +84,29 @@ var questionBank = [
 ];
 
 //user is presented with first question
+function showQuestion() {
+    //get a handle on my question element
+    var questionsEl = document.getElementById("questions")
+
+    questionsEl.textContent = questionBank.question;
+
+    var answers = document.querySelectorAll("#answers")
+    answers.forEach(fucntion(element, index){
+        element.textContent = answers[index];
+
+    });
+    }
+
+    showQuestion(question);
+
+
+// when start button is clicked, show first question.
+    // var startBtn = document.getElementById('start-btn');
+    // startBtn.addEventListener('click', function() {
+    //     console.log('clicked!')
+    // });
+
+
 //user provides input
 //store user input 
 //compare input to answer bank
