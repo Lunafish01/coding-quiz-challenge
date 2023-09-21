@@ -1,6 +1,6 @@
-//when page loads timer starts 
-//build timer for 60 secs 
-//show message 'Game Over!' when timer reachs 0 
+// //declare an array with questions and answers (done)
+// //build question and answer bank (done)
+// //make sure to include correct aswers in array objects (done)
 var questions = [
     
     {
@@ -50,6 +50,9 @@ var questions = [
     }
 ];
 
+//when page loads timer starts 
+//build timer for 60 secs 
+//show message 'Game Over!' when timer reachs 0 
 var countDown = 60;
 var timerEl = document.getElementById("count-down");
 
@@ -65,8 +68,8 @@ function setTimer() {
         }
     }, 1000);
 }
-// //build start button (done, need to center start button)
-// //game should start when page loads or start button is clicked
+
+//geting a handle on all elements 
 var questionEl = document.getElementById('question');
 var answerBtn= document.getElementById('answer-buttons');
 var nextBtn = document.getElementById('next-button');
@@ -74,6 +77,7 @@ var nextBtn = document.getElementById('next-button');
 var currentQuestionIndex = 0;
 var score = 0;
 
+//quiz starts at first question and a score of 0
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
@@ -81,42 +85,36 @@ function startQuiz() {
     showQuestion();
 }
 
+
+//user is presented with first question
 function showQuestion() {
-     var currentQuestion = questions[currentQuestionIndex];
-     var questNum = currentQuestion + 1;
-
-     questionEl.textContent = questNum + '. ' + currentQuestion.question;
-
-     currentQuestion.answers.forEach(answer => {
+    resetQuestion();
+    var currentQuestion = questions[currentQuestionIndex];
+    questionEl.textContent = currentQuestion.question;
+    
+    currentQuestion.answers.forEach(answer => {
         var answerButton = document.createElement('button');
         answerButton.textContent = answer.text;
         answerButton.classList.add('answer-btn');
         answerBtn.appendChild(answerButton);
-     });
+    });
 }
 
-function resetQuestions() {
+//reset question card so questions and answer show for new question.
+function resetQuestion() {
     nextBtn.style.display = 'none';
     while(answerBtn.firstChild){
         answerBtn.removeChild(answerBtn.firstChild);
     }
 }
+
+//user provides input
+//store user input 
+//check answers
+//if input is correct return 'correct'
+//if input is incorrect return 'incorrect'
+//display user score when all questions are answered or time runs out
+
 startQuiz();
 
 
-// //declare an array with questions and answers (done)
-// //build question and answer bank (done)
-// //make sure to include correct aswers in array objects (done)
-// var currentQuestionIndex = 0;
-//user is presented with first question
-//validate use input 
-//check answers
-//output 'right' or 'wrong' 
-//user provides input
-//store user input 
-//compare input to answer bank
-//if input is correct return 'correct'
-//if input is incorrect return 'incorrect'
-    // a. repeat previous 3 steps 
-//display user score when all questions are answered or time runs out
-//user enters and saves initials and score
