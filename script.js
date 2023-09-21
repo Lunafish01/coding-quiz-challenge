@@ -102,7 +102,6 @@ function showQuestion() {
 
 //reset question card so questions and answer show for new question.
 function resetQuestion() {
-    nextBtn.style.display = 'none';
     while(answerBtn.firstChild){
         answerBtn.removeChild(answerBtn.firstChild);
     }
