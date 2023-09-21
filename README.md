@@ -35,3 +35,10 @@ I was tasked with creating a Quiz game using HTML, CSS and JavaScript, to test m
 - WHEN the game is over
 
 - THEN I can save my initials and my score
+
+## Link to Deployed Application
+
+[Coding Quiz](https://lunafish01.github.io/coding-quiz-challenge/)
+
+## Screenshot 
+
