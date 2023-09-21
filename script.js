@@ -69,7 +69,7 @@ function setTimer() {
     }, 1000);
 }
 
-//geting a handle on elements 
+//getting a handle on all of the elements 
 var questionEl = document.getElementById('question');
 var answerBtn= document.getElementById('answer-buttons');
 var nextBtn = document.getElementById('next-button');
@@ -84,8 +84,8 @@ function startQuiz() {
     showQuestion();
 }
 
-
 //user is presented with first question
+//user is presented with multiple choice answers
 function showQuestion() {
     resetQuestion();
     var currentQuestion = questions[currentQuestionIndex];
@@ -108,8 +108,6 @@ function resetQuestion() {
         answerBtn.removeChild(answerBtn.firstChild);
     }
 }
-
-
 
 //user provides input
 //store user input 
