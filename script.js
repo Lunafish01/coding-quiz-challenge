@@ -74,6 +74,7 @@ var questionEl = document.getElementById('question');
 var answerBtn= document.getElementById('answer-buttons');
 var nextBtn = document.getElementById('next-button');
 
+var shuffledQuestions = []
 var currentQuestionIndex = 0;
 var score = 0;
 
