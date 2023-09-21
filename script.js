@@ -69,12 +69,10 @@ function setTimer() {
     }, 1000);
 }
 
-//geting a handle on all elements 
+//geting a handle on elements 
 var questionEl = document.getElementById('question');
 var answerBtn= document.getElementById('answer-buttons');
 var nextBtn = document.getElementById('next-button');
-
-var shuffledQuestions = []
 var currentQuestionIndex = 0;
 var score = 0;
 
@@ -91,10 +89,12 @@ function startQuiz() {
 function showQuestion() {
     resetQuestion();
     var currentQuestion = questions[currentQuestionIndex];
+
     questionEl.textContent = currentQuestion.question;
     
-    currentQuestion.answers.forEach(answer => {
+    currentQuestion.answers.forEach(function(answer) {
         var answerButton = document.createElement('button');
+
         answerButton.textContent = answer.text;
         answerButton.classList.add('answer-btn');
         answerBtn.appendChild(answerButton);
@@ -103,10 +103,13 @@ function showQuestion() {
 
 //reset question card so questions and answer show for new question.
 function resetQuestion() {
+    nextBtn.style.display = 'none';
     while(answerBtn.firstChild){
         answerBtn.removeChild(answerBtn.firstChild);
     }
 }
+
+
 
 //user provides input
 //store user input 
