@@ -91,7 +91,7 @@ function showQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
 
     questionEl.textContent = currentQuestion.question;
-    for(var i =0; i < questions.answers.length; i++) {
+    for(var i =0; i < answers.length; i++) {
         var answerButton = document.createElement('button');
 
         answerButton.textContent = answer.text;

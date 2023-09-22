@@ -42,4 +42,4 @@ I was tasked with creating a Quiz game using HTML, CSS and JavaScript, to test m
 
 ## Screenshot 
 
-![Alt text](<Screenshot 2023-09-20 at 11.46.06 PM.png>)
+![Alt text](<Screenshot 2023-09-21 at 10.36.59 PM.png>)
