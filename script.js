@@ -91,20 +91,19 @@ function showQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
 
     questionEl.textContent = currentQuestion.question;
-    
-    currentQuestion.answers.forEach(function(answer) {
+    for(var i =0; i < questions.answers.length; i++) {
         var answerButton = document.createElement('button');
 
         answerButton.textContent = answer.text;
         answerButton.classList.add('answer-btn');
         answerBtn.appendChild(answerButton);
-    });
+    };
 }
 
 //reset question card so questions and answer show for new question.
 function resetQuestion() {
     nextBtn.style.display = 'none';
-    while(answerBtn.firstChild){
+    for(var i = 0; i < answerBtn.length; i++) {
         answerBtn.removeChild(answerBtn.firstChild);
     }
 }
